@@ -1,0 +1,27 @@
+$ npm install -g @angular/cli
+$ ng new bookstore
+$ cd bookstore
+$ ng serve
+$ ng g c books
+$ ng g c book-details
+
+//import Routes, RouterModule in app.module.ts
+import { Routes, RouterModule } from '@angular/router';
+
+//add below code snippets in app.component.html for navigate to differnt page by clicking on the link
+<a routerLink="/books">Books</a>
+<br>
+<a routerLink="/book-details">Book Details</a>
+
+$ ng g c pagenotfound
+
+//import Router in books.component.ts
+import { Router } from "@angular/router";
+
+//import ActivatedRoute in book-details.component.ts
+import { ActivatedRoute } from '@angular/router';
+
+//creating child component
+$ ng g c book-details/book-overview
+
+//when we click on the a book then it will navigate us to the page for that particular book details page
